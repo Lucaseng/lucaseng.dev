@@ -12,12 +12,17 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 700;
 }
+.navbar {
+  position: fixed;
+  z-index: 3;
+}
 
 nav {
   margin-top: 1.5em;
 }
 #rhs {
   float: right;
+  padding-left: 63vw;
   margin-right: 2.5em;
 }
 
@@ -36,7 +41,7 @@ a {
 }
 
 #home img {
-  height: 14em;
+  height: 13.5em;
   border-radius: 50%;
 }
 
@@ -54,10 +59,67 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 95vh;
   flex-direction: column;
 }
 
 #welcome-img {
   display: inline-flex;
+}
+
+#left-vl {
+  border-left: 1px solid #bad7f2;
+  height: 15vh;
+  position: fixed;
+  bottom: 0;
+  left: 2.5vw;
+}
+
+#right-vl {
+  border-left: 1px solid #bad7f2;
+  height: 26vh;
+  position: fixed;
+  bottom: 0;
+  right: 2.5vw;
+}
+
+#right-email p {
+  position: fixed;
+  bottom: 32vh;
+  transform: rotate(-90deg);
+  left: 93.5vw;
+}
+
+#linkedin {
+  height: 2.8vh;
+  position: fixed;
+  left: 2vw;
+  bottom: 21.5vh;
+  fill: #bad7f2;
+}
+
+#github {
+  height: 3vh;
+  position: fixed;
+  left: 2vw;
+  bottom: 26vh;
+  fill: #bad7f2;
+}
+
+#mail {
+  height: 2.2vh;
+  position: fixed;
+  left: 1.8vw;
+  bottom: 17vh;
+  fill: #bad7f2;
+}
+
+.content {
+  width: 45vw;
+  font-size: 12.5pt;
+}
+
+#about-container {
+  display: flex;
+  justify-content: center;
 }

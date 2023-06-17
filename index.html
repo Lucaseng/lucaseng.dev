@@ -10,31 +10,107 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.js"
+      integrity="sha512-7cOf9RTSiTzxLfEZ4aFKpdTAM0rI/OSIcr9MEg7sLQoWaMxkCh0wmYDxJMJP8DVMtRC1WCVD6QD749PKZuaajw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.css"
+      integrity="sha512-FKlWnaJrtBEqH+gNy8kvp+/61S+8iOKb5tG+EKCQ3Fc3iUYr9MvnywpkZBcuNKrxQxlnZYpNwDgkZ2atX7wVVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div>
-      <nav class="navbar">
-        <a href="#">Home</a>
+    <div class="navbar">
+      <nav>
+        <a href="#home">Home</a>
         <div id="rhs">
-          <a href="#">About Me</a>
-          <a href="#">Technical Skills</a>
+          <a href="#p2">About Me</a>
+          <a href="#p3">Technical Skills</a>
           <a href="#">Projects</a>
           <a href="#">Resume</a>
         </div>
       </nav>
-    </div>
-    <div id="home">
-      <div id="home-header">
-        <div id="welcome-img">
-          <h1 class="inter">
-            Kia Ora,<br />
-            I'm Lucas.
-          </h1>
-          <img src="resources/img/lucaseng.jpg" alt="Lucas Eng" />
-        </div>
-        <div class="break"></div>
-        <p onclick="typeWriter()" id="demo"></p>
+      <div id="left-link">
+        <div id="left-vl"></div>
+        <a target="_blank" href="mailto:hi@lucaseng.dev"
+          ><img id="mail" src="resources/img/mail.svg" alt="hi@lucaseng.dev"
+        /></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/lucas-eng-6b6a68137/"
+          ><img
+            id="linkedin"
+            src="resources/img/linkedin.svg"
+            alt="https://www.linkedin.com/in/lucas-eng-6b6a68137/"
+        /></a>
+        <a target="_blank" href="https://github.com/Lucaseng">
+          <img
+            id="github"
+            src="resources/img/github.svg"
+            alt="https://github.com/Lucaseng"
+          />
+        </a>
       </div>
+    </div>
+    <div id="right-email">
+      <div id="container">
+        <div id="right-vl"></div>
+        <p>hi@lucaseng.dev</p>
+      </div>
+    </div>
+
+    <div id="fullpage">
+      <div id="home" data-anchor="home" class="section">
+        <div id="home-header">
+          <div id="welcome-img">
+            <h1 class="inter">
+              Kia Ora,<br />
+              I'm Lucas.
+            </h1>
+            <img src="resources/img/lucaseng.jpg" alt="Lucas Eng" />
+          </div>
+          <p id="demo"></p>
+        </div>
+      </div>
+      <div id="about" data-anchor="p2" class="section">
+        <div id="about-container">
+          <div class="content">
+            <h1 class="inter">About Me.</h1>
+            <p>
+              I recently graduated with a Bachelor of Science Majoring in
+              Computer Science and Statistics from the University of Auckland in
+              June of 2023.
+              <span style="color: #7ae582"
+                >I am seeking a graduate role in backend engineering.</span
+              >
+            </p>
+            <p>
+              Today, data plays a huge role in the modern technology
+              environment. It’s the cornerstone for user personalisation,
+              analytics, and optimised decision-making. Hence, controlling how
+              that data flows in a system is of such high importance. Throughout
+              my tertiary studies, I have developed a strong passion for API
+              development and deployment, and I am seeking the opportunity to
+              continue developing my expertise in backend development.
+            </p>
+            <p>
+              Seeing people thrive motivates me; it’s a core part of who I am,
+              and I firmly believe that it’s very much a core part of the
+              technology sector, too; how do we positively disrupt the way
+              people do life? I aspire to use my knowledge of software
+              development to maximise technology’s impact on all people. I want
+              to see how my solutions have a real purpose and a real impact on
+              how people connect, work, and learn.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="skills" data-anchor="p3" class="section"></div>
     </div>
   </body>
 </html>
