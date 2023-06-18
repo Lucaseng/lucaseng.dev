@@ -23,11 +23,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </head>
   <body>
     <div class="navbar">
       <nav>
-        <a href="#home">Home</a>
+        <a href="#p1">Home</a>
         <div id="rhs">
           <a href="#p2">About Me</a>
           <a href="#p3">Technical Skills</a>
@@ -65,16 +66,18 @@
     </div>
 
     <div id="fullpage">
-      <div id="home" data-anchor="home" class="section">
-        <div id="home-header">
-          <div id="welcome-img">
-            <h1 class="inter">
-              Kia Ora,<br />
-              I'm Lucas.
-            </h1>
-            <img src="resources/img/lucaseng.jpg" alt="Lucas Eng" />
+      <div data-anchor="p1" class="section">
+        <div id="home">
+          <div id="home-header">
+            <div id="welcome-img">
+              <h1 class="inter">
+                Kia Ora,<br />
+                I'm Lucas.
+              </h1>
+              <img src="resources/img/lucaseng.jpg" alt="Lucas Eng" />
+            </div>
+            <p id="demo"></p>
           </div>
-          <p id="demo"></p>
         </div>
       </div>
       <div id="about" data-anchor="p2" class="section">
@@ -110,7 +113,14 @@
           </div>
         </div>
       </div>
-      <div id="skills" data-anchor="p3" class="section"></div>
+      <div id="skills" data-anchor="p3" class="section">
+        <div id="skills-container">
+          <div class="content">
+            <h1 class="inter">Technical Skills.</h1>
+            <p id="mySkills"></p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
