@@ -1,9 +1,17 @@
+const linkArr = ["p1-link", "p2-link", "p3-link", "p4-link"];
+
 new fullpage("#fullpage", {
   // Navigation
   loopTop: true,
   loopBottom: true,
-  anchors: ["p1", "p2", "p3"],
+  anchors: ["p1", "p2", "p3", "p4"],
   afterLoad: function (origin, destination, direction, trigger) {
+    document.getElementById(`${origin.anchor}-link`).style.textDecorationColor =
+      "transparent";
+    document.getElementById(
+      `${destination.anchor}-link`
+    ).style.textDecorationColor = "#7ae582";
+
     if (destination.anchor === "p3") {
       techSkillTypeWriter();
     }
