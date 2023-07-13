@@ -3,8 +3,10 @@ Updated portfolio website
 
 ## Technology Used
 - HTML 5
-- CSS (Bootstrap)
+- CSS
 - JavaScript (ES6+)
+- TypewriterJS
+- Fullpage.js
 
 ## Colour Scheme
 #112240 - Oxford Blue
