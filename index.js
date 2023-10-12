@@ -20,11 +20,12 @@ new fullpage("#fullpage", {
 
 let myArr = [
   `mySkills.forEach((skill) => {console.log(skill)})`,
-  "JavaScript (ES6+, Node.js)",
+  "JavaScript (ES6+, Node.js, React)",
   "Java",
   "Python",
   "C#",
   "AWS",
+  "Azure",
   "Git",
   "R",
   "SQL",
@@ -45,13 +46,13 @@ function typeWriter() {
   });
 
   typewriter
-    .typeString("> I’m a recent Computer Science and Statistics Graduate.")
+    .typeString("> I'm stoked to be an incoming Graduate Engineer at Xero!")
     .start();
 }
 
 function techSkillTypeWriter() {
   var app = document.getElementById("mySkills");
-  if (app.innerText.length === 234) return;
+  if (app.innerText.length > 10) return;
 
   var typewriter = new Typewriter(app, {
     loop: false,
