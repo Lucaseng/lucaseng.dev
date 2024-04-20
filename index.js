@@ -46,7 +46,7 @@ function typeWriter() {
   });
 
   typewriter
-    .typeString("> I'm stoked to be an incoming Graduate Engineer at Xero!")
+    .typeString("> I'm stoked to be a Graduate Software Engineer at Xero!")
     .start();
 }
 
