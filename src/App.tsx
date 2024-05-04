@@ -1,5 +1,5 @@
 import './App.css'
-import {Container, createTheme, CssBaseline, ThemeProvider} from "@mui/material";
+import {Box, createTheme, CssBaseline, ThemeProvider} from "@mui/material";
 import Header from "./Components/Header.tsx";
 import Home from "./Components/Home.tsx";
 
@@ -8,9 +8,17 @@ function App() {
     const darkTheme = createTheme({
         palette: {
             mode: 'dark',
+            background: {
+                default: '#112240',
+            },
+            text: {
+                primary: "#bad7f2",
+                secondary: "#7ae582"
+
+            }
         },
         typography: {
-            fontFamily: "Space Mono, Inter, Roboto"
+            fontFamily: "IBM Plex Mono, Inter, Roboto"
         }
     });
 
@@ -18,10 +26,10 @@ function App() {
     <>
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
-            <Container sx={{display:"flex", flexDirection:"column"}} maxWidth="lg">
+            <Box>
                 <Header/>
                 <Home/>
-            </Container>
+            </Box>
 
         </ThemeProvider>
 
