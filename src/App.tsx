@@ -1,7 +1,7 @@
 import './App.css'
-import {Box, createTheme, CssBaseline, ThemeProvider} from "@mui/material";
+import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
+import FullpageComponent from "./Components/FullPageComponent.tsx";
 import Header from "./Components/Header.tsx";
-import Home from "./Components/Home.tsx";
 
 function App() {
 
@@ -26,11 +26,8 @@ function App() {
     <>
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
-            <Box>
-                <Header/>
-                <Home/>
-            </Box>
-
+            <Header/>
+            <FullpageComponent/>
         </ThemeProvider>
 
     </>
