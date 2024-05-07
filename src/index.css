@@ -1,3 +1,7 @@
 .myWrapper {
     font-size: 1.3em;
 }
+
+.fp-watermark {
+    display: none;
+}
