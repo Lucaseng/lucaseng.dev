@@ -6,7 +6,7 @@ import { fullpageApi } from "@fullpage/react-fullpage";
 import { useState } from "react";
 
 function App() {
-  const [myFullpageApi, setFullpageApi] = useState();
+  const [myFullpageApi, setFullpageApi] = useState<fullpageApi>();
   const darkTheme = createTheme({
     palette: {
       mode: "dark",
@@ -31,7 +31,7 @@ function App() {
         <FullpageComponent
           onFullpageApi={(api: fullpageApi) => setFullpageApi(api)}
         />
-        <Header myApi={myFullpageApi} />
+        {myFullpageApi && <Header myApi={myFullpageApi} />}
       </ThemeProvider>
     </>
   );

@@ -5,7 +5,11 @@ import About from "./About.tsx";
 import TechnicalSkills from "./TechnicalSkills.tsx";
 import Projects from "./Projects.tsx";
 
-const FullpageComponent = ({ onFullpageApi }) => {
+interface FullpageComponentProps {
+  onFullpageApi: (fullpageApi: fullpageApi) => void;
+}
+
+const FullpageComponent = ({ onFullpageApi }: FullpageComponentProps) => {
   const handleFullpageApi = (fullpageApi: fullpageApi) => {
     if (onFullpageApi) {
       onFullpageApi(fullpageApi);
@@ -14,11 +18,12 @@ const FullpageComponent = ({ onFullpageApi }) => {
 
   return (
     <ReactFullpage
-      licenseKey={"YOUR_KEY_HERE"}
+      licenseKey={""}
       scrollingSpeed={1000}
       loopBottom={true}
       loopTop={true}
       anchors={["home", "about", "technical-skills", "projects"]}
+      // @ts-expect-error state is un-used
       render={({ state, fullpageApi }) => {
         if (fullpageApi) {
           handleFullpageApi(fullpageApi);
@@ -42,6 +47,7 @@ const FullpageComponent = ({ onFullpageApi }) => {
           </>
         );
       }}
+      credits={{ enabled: false }}
     />
   );
 };
