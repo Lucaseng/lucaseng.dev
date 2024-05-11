@@ -5,6 +5,7 @@ import About from "./About.tsx";
 import TechnicalSkills from "./TechnicalSkills.tsx";
 import Projects from "./Projects.tsx";
 import { useState } from "react";
+import { Fade } from "@mui/material";
 
 interface FullpageComponentProps {
   onFullpageApi: (fullpageApi: fullpageApi) => void;
@@ -38,20 +39,22 @@ const FullpageComponent = ({ onFullpageApi }: FullpageComponentProps) => {
         }
         return (
           <>
-            <div id="fullpage-wrapper">
-              <div className="section">
-                <Home />
+            <Fade in={true} timeout={1000}>
+              <div id="fullpage-wrapper">
+                <div className="section">
+                  <Home />
+                </div>
+                <div className="section">
+                  <About />
+                </div>
+                <div className="section">
+                  <TechnicalSkills activeSection={activeSection} />
+                </div>
+                <div className="section">
+                  <Projects />
+                </div>
               </div>
-              <div className="section">
-                <About />
-              </div>
-              <div className="section">
-                <TechnicalSkills activeSection={activeSection} />
-              </div>
-              <div className="section">
-                <Projects />
-              </div>
-            </div>
+            </Fade>
           </>
         );
       }}

@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import Typewriter from "typewriter-effect";
 import { useEffect, useState } from "react";
 import { useTheme } from "@mui/material/styles";
@@ -31,6 +31,7 @@ let myArr = [
 
 function TechnicalSkills({ activeSection }: TechnicalSkillsProps) {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const [hasRendered, setHasRendered] = useState(false);
 
   useEffect(() => {
@@ -54,11 +55,16 @@ function TechnicalSkills({ activeSection }: TechnicalSkillsProps) {
             sx={{ mb: 4 }}
             fontFamily={"inter"}
             fontWeight={"700"}
-            variant="h2"
+            variant={isSmallScreen ? "h4" : "h2"}
           >
             Technical Skills.
           </Typography>
-          <Box sx={{ color: theme.palette.text.secondary }}>
+          <Box
+            sx={{
+              fontSize: isSmallScreen ? "0.9em" : "1em",
+              color: theme.palette.text.secondary,
+            }}
+          >
             {hasRendered && (
               <Typewriter
                 options={{

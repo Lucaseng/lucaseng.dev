@@ -1,8 +1,10 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 function About() {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Container maxWidth={"md"}>
       <div
@@ -18,11 +20,15 @@ function About() {
             mb={3}
             fontFamily={"inter"}
             fontWeight={"700"}
-            variant="h2"
+            variant={isSmallScreen ? "h4" : "h2"}
           >
             About Me.
           </Typography>
-          <Typography mb={3} fontSize={"1.1em"} variant="body1">
+          <Typography
+            mb={3}
+            fontSize={isSmallScreen ? "0.9em" : "1.1em"}
+            variant="body1"
+          >
             I graduated with a Bachelor of Science Majoring in Computer Science
             and Statistics from the University of Auckland in September of 2023.
             <span style={{ color: theme.palette.text.secondary }}>
@@ -31,7 +37,10 @@ function About() {
             </span>
           </Typography>
 
-          <Typography fontSize={"1.1em"} variant="body1">
+          <Typography
+            fontSize={isSmallScreen ? "0.9em" : "1.1em"}
+            variant="body1"
+          >
             Seeing people thrive motivates me; it's a core part of who I am, and
             I firmly believe that it's very much a core part of the technology
             sector, too; how do we positively disrupt the way people do life? I
