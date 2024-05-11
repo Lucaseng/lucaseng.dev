@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
-function Home() {
+function About() {
   const theme = useTheme();
   return (
     <Container maxWidth={"md"}>
@@ -46,4 +46,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default About;
