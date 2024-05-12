@@ -33,7 +33,7 @@ const FullpageComponent = ({ onFullpageApi }: FullpageComponentProps) => {
       loopTop={true}
       anchors={["home", "about", "technical-skills", "projects"]}
       // @ts-expect-error state is un-used
-      render={({ state, fullpageApi }) => {
+      render={({ _state, fullpageApi }) => {
         if (fullpageApi) {
           handleFullpageApi(fullpageApi);
         }

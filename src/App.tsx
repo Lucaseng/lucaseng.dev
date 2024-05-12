@@ -4,6 +4,7 @@ import FullpageComponent from "./Components/FullPageComponent.tsx";
 import Header from "./Components/Header.tsx";
 import { fullpageApi } from "@fullpage/react-fullpage";
 import { useState } from "react";
+import IconFooter from "./Components/IconFooter.tsx";
 
 function App() {
   const [myFullpageApi, setFullpageApi] = useState<fullpageApi>();
@@ -27,11 +28,13 @@ function App() {
     <>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-
-        <FullpageComponent
-          onFullpageApi={(api: fullpageApi) => setFullpageApi(api)}
-        />
-        {myFullpageApi && <Header myApi={myFullpageApi} />}
+        <div style={{ position: "relative", zIndex: 1 }}>
+          <IconFooter />
+          <FullpageComponent
+            onFullpageApi={(api: fullpageApi) => setFullpageApi(api)}
+          />
+          {myFullpageApi && <Header myApi={myFullpageApi} />}
+        </div>
       </ThemeProvider>
     </>
   );
