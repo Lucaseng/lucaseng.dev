@@ -1,0 +1,34 @@
+{
+  "PROJECT_ARR" : [{
+    "TITLE": "Capitalise",
+    "DESCRIPTION": "This is a deployed online capstone project showcase gallery for students at the University of Auckland. My role was in API development and deployment, utilising Node.js and MongoDB.",
+    "URL": "https://www.capitalise.space",
+    "BUTTON_TEXT": "See Capitalise"
+  }, {
+    "TITLE": "Kudos King",
+    "DESCRIPTION": "This is a deployed web application which makes use of the Strava API to aggregate and compare the kudos awarded to the given user over their recent activities. The athletes are ranked based on the number of kudos awarded, and a king of the hill is established. Technology utilised included React and MUI.",
+    "URL": "https://lucaseng.dev/kudosking",
+    "BUTTON_TEXT": "See Kudos King"
+  }, {
+    "TITLE": "NCEA Note Repository",
+    "DESCRIPTION": "This is a deployed web application allowing New Zealand High School students to collate and share their NCEA notes. I wrote and deployed both the server-side and client-side. Technology utilised included ASP.Net Core, React and MySQL.",
+    "URL": "https://lucaseng.dev/nceanoterepo",
+    "BUTTON_TEXT": "See NCEA Note Repository"
+  }, {
+    "TITLE": "Job Profiles New Zealand",
+    "DESCRIPTION": "A web application which allows users to comprehensively search through and filter job profiles using a range of metrics. I wrote both the server-side and client-side of this application. Technology utilised included ASP.Net Core, React and MongoDB.",
+    "URL": "https://github.com/Lucaseng/Job-Profiles-New-Zealand",
+    "BUTTON_TEXT": "See the Job Profiles NZ Repo"
+  },{
+    "TITLE": "The Game Academy",
+    "DESCRIPTION": "A clone of chess.com. Both front-end (JavaScript - ES6+) and back-end (ASP.Net Core) were developed by myself as required by the brief. The purpose of this project was to demonstrate how APIs connect both the front and back end together.",
+    "URL": "https://github.com/Lucaseng/theGameAcademy",
+    "BUTTON_TEXT": "See The Game Academy Repo"
+  }, {
+    "TITLE": "Arawatta Dental Centre",
+    "DESCRIPTION": "A WordPress CMS website for a dental centre in Melbourne, Australia. I created, hosted and currently manage this website.",
+    "URL": "https://www.arawattadentalcentre.com.au/",
+    "BUTTON_TEXT": "See Arawatta Dental Centre"
+  } ]
+
+}
