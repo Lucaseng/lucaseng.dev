@@ -5,6 +5,7 @@ import Header from "./Components/Header.tsx";
 import { fullpageApi } from "@fullpage/react-fullpage";
 import { useState } from "react";
 import IconFooter from "./Components/IconFooter.tsx";
+import EmailFooter from "./Components/EmailFooter.tsx";
 
 function App() {
   const [myFullpageApi, setFullpageApi] = useState<fullpageApi>();
@@ -30,6 +31,7 @@ function App() {
         <CssBaseline />
         <div style={{ position: "relative", zIndex: 1 }}>
           <IconFooter />
+          <EmailFooter />
           <FullpageComponent
             onFullpageApi={(api: fullpageApi) => setFullpageApi(api)}
           />

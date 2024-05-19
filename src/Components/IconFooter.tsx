@@ -43,7 +43,7 @@ function IconFooter() {
         >
           <MailOutline sx={{ fontSize: "2rem" }} />
         </IconButton>
-        {!isSmallScreen && <VerticalLine />}
+        {!isSmallScreen && <VerticalLine position={"left"} />}
       </Stack>
     </Box>
   );
