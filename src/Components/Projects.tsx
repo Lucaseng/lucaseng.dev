@@ -1,7 +1,15 @@
 import React, { useState } from "react";
-import { Box, Container, Grow, Pagination, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grow,
+  Pagination,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import ProjectSlice from "./ProjectSlice";
 import constants from "../Data/constants.json";
+import { useTheme } from "@mui/material/styles";
 
 interface ProjectSliceProps {
   TITLE: string;
@@ -11,6 +19,8 @@ interface ProjectSliceProps {
 }
 
 function Projects() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const [page, setPage] = useState(1);
   const [projectArr, setProjectArr] = useState(
     constants.PROJECT_ARR.slice(0, 2),
@@ -39,12 +49,12 @@ function Projects() {
           height: "100vh",
         }}
       >
-        <Box minHeight={"60vh"}>
+        <Box sx={{ p: isSmallScreen ? 2 : 0 }} minHeight={"60vh"}>
           <Typography
             sx={{ pb: 3 }}
             fontFamily={"inter"}
             fontWeight={"700"}
-            variant="h2"
+            variant={isSmallScreen ? "h4" : "h2"}
           >
             Projects.
           </Typography>
