@@ -1,16 +1,8 @@
-# lucaseng.dev
-Updated portfolio website
+# LUCASENG.DEV - React Rebuild
 
-## Technology Used
-- HTML 5
-- CSS
-- JavaScript (ES6+)
-- TypewriterJS
-- Fullpage.js
+Initially, my personal portfolio was built using a simplified approach - utilising basic web technology languages like HTML, CSS and Vanilla JS.
 
-## Colour Scheme
-#112240 - Oxford Blue
+As my skill-set and project repertoire improves, there was a clear need to have my portfolio built on a modern framework that could elegantly handle updates to the application.
 
-#7AE582 - Light Green
+Hence, I decided there was a need to rebuild my portfolio using React.
 
-#BAD7F2 - Columbia Blue
