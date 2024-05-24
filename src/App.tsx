@@ -29,6 +29,7 @@ function App() {
     <>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
+
         <div style={{ position: "relative", zIndex: 1 }}>
           <IconFooter />
           <EmailFooter />
