@@ -23,6 +23,9 @@ function Header({ myApi }: { myApi: fullpageApi }) {
   const handleSectionClick = (sectionIndex: number) => {
     myApi.moveTo(sectionIndex + 1);
     setDrawerOpen(false);
+    if (sectionIndex === 4) {
+      window.open("/lucaseng-resume-may-2024.pdf", "_blank");
+    }
   };
 
   return (
