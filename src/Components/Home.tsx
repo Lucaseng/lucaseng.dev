@@ -98,7 +98,7 @@ function Home() {
                     </Typography>
                     <Avatar
                       alt="Lucas Eng"
-                      src="lucaseng.jpg"
+                      src="lucaseng-v2.jpg"
                       sx={{
                         width: 230,
                         height: 230,
@@ -125,7 +125,7 @@ function Home() {
                     onInit={(typewriter) => {
                       typewriter
                         .typeString(
-                          "> I'm stoked to be a Graduate Software Engineer at Xero!",
+                          "> I'm stoked to be an Associate Software Engineer at Xero!",
                         )
                         .start();
                     }}

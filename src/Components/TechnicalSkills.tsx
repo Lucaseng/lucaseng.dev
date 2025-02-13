@@ -7,14 +7,14 @@ interface TechnicalSkillsProps {
   activeSection: number;
 }
 
-let myArr = [
+let skillArr = [
   `mySkills.forEach((skill) => {console.log(skill)})`,
-  "JavaScript (ES6+, Node.js, React)",
-  "TypeScript",
+  "TypeScript (ES6+, Node.js, React)",
+  "JavaScript",
+  "C#",
   "Java",
   "Python",
-  "C#",
-  "AWS",
+  "AWS (Certified Developer - Associate)",
   "Azure",
   "Git",
   "R",
@@ -82,8 +82,8 @@ function TechnicalSkills({ activeSection }: TechnicalSkillsProps) {
                     .typeString(`onsole.log(skill)}<br>`)
                     .changeDelay(20);
 
-                  for (let i = 1; i < myArr.length; i++) {
-                    typewriter.typeString("<br>" + myArr[i]).start();
+                  for (let i = 1; i < skillArr.length; i++) {
+                    typewriter.typeString("<br>" + skillArr[i]).start();
                   }
                 }}
               />
