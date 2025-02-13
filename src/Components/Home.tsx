@@ -79,7 +79,7 @@ function Home() {
                     </Typography>
                     <Avatar
                       alt="Lucas Eng"
-                      src="lucaseng.jpg"
+                      src="lucaseng-v2.jpg"
                       sx={{
                         width: 150,
                         height: 150,
