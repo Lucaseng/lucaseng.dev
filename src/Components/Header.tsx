@@ -24,7 +24,7 @@ function Header({ myApi }: { myApi: fullpageApi }) {
     myApi.moveTo(sectionIndex + 1);
     setDrawerOpen(false);
     if (sectionIndex === 4) {
-      window.open("/lucaseng-resume-may-2024.pdf", "_blank");
+      window.open("/lucaseng-resume-jan-2026.pdf", "_blank");
     }
   };
 

@@ -74,7 +74,7 @@ function Home() {
                       fontWeight={"700"}
                       variant="h3"
                     >
-                      Kia Ora,
+                      G'day,
                       <br /> I'm Lucas.
                     </Typography>
                     <Avatar
@@ -93,7 +93,7 @@ function Home() {
                       fontWeight={"700"}
                       variant="h1"
                     >
-                      Kia Ora,
+                      G'day,
                       <br /> I'm Lucas.
                     </Typography>
                     <Avatar
