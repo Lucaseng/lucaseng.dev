@@ -30,11 +30,9 @@ function About() {
             variant="body1"
           >
               Hey!
-            I graduated with a Bachelor of Science Majoring in Computer Science
-            and Statistics from the University of Auckland in September of 2023.
-            <span style={{ color: theme.palette.text.secondary }}>
-              &nbsp;Now in my third year as an Associate Software Engineer at Xero, I'm excited to build solutions that make financial transactions seamless and secure.
-            </span>
+              <span style={{ color: theme.palette.text.secondary }}>
+                  &nbsp;I'm a software engineer at Xero. Over the past three years, I've worked on payments and financial systems that help businesses get paid with confidence.
+              </span>
           </Typography>
 
           <Typography

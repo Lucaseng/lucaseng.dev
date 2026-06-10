@@ -125,7 +125,7 @@ function Home() {
                     onInit={(typewriter) => {
                       typewriter
                         .typeString(
-                          "> I'm stoked to be an Associate Software Engineer at Xero!",
+                          "> I'm stoked to be a Software Engineer at Xero!",
                         )
                         .start();
                     }}
