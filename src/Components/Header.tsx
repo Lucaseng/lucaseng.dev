@@ -13,7 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import { fullpageApi } from "@fullpage/react-fullpage";
 
-const sections = ["About Me", "Technical Skills", "Projects", "Resume"];
+const sections = ["About Me", "Experience", "Technical Skills", "Projects", "Resume"];
 
 function Header({ myApi }: { myApi: fullpageApi }) {
   const theme = useTheme();
@@ -21,11 +21,14 @@ function Header({ myApi }: { myApi: fullpageApi }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleSectionClick = (sectionIndex: number) => {
+    if (sectionIndex === 5) {
+      window.open("https://drive.google.com/file/d/1LdhLEQZdQPBmPyOq33ZTdRdo0SJr7Knw/view?usp=sharing", "_blank");
+      setDrawerOpen(false);
+      return;
+    }
+
     myApi.moveTo(sectionIndex + 1);
     setDrawerOpen(false);
-    if (sectionIndex === 4) {
-      window.open("https://drive.google.com/file/d/1LdhLEQZdQPBmPyOq33ZTdRdo0SJr7Knw/view?usp=sharing", "_blank");
-    }
   };
 
   return (

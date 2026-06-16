@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import Typewriter from "typewriter-effect";
-import { GridLoader } from "react-spinners";
+import { PropagateLoader } from "react-spinners";
 
 function Home() {
   const theme = useTheme();
@@ -42,7 +42,7 @@ function Home() {
                 alignItems: "center",
               }}
             >
-              <GridLoader size={10} color={theme.palette.text.primary} />
+              <PropagateLoader size={10} color={theme.palette.text.primary} />
               <Typography sx={{ pt: 3 }}>Loading Resources</Typography>
               <Typography>Sit Tight, This Won't Take Long!</Typography>
             </Box>

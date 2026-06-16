@@ -2,6 +2,7 @@
 import ReactFullpage, { fullpageApi } from "@fullpage/react-fullpage";
 import Home from "./Home.tsx";
 import About from "./About.tsx";
+import Experience from "./Experience.tsx";
 import TechnicalSkills from "./TechnicalSkills.tsx";
 import Projects from "./Projects.tsx";
 import { useState } from "react";
@@ -31,7 +32,7 @@ const FullpageComponent = ({ onFullpageApi }: FullpageComponentProps) => {
       scrollingSpeed={1000}
       loopBottom={true}
       loopTop={true}
-      anchors={["home", "about", "technical-skills", "projects"]}
+      anchors={["home", "about", "experience", "technical-skills", "projects"]}
       // @ts-expect-error state is un-used
       render={({ _state, fullpageApi }) => {
         if (fullpageApi) {
@@ -46,6 +47,9 @@ const FullpageComponent = ({ onFullpageApi }: FullpageComponentProps) => {
                 </div>
                 <div className="section">
                   <About />
+                </div>
+                <div className="section">
+                  <Experience activeSection={activeSection} />
                 </div>
                 <div className="section">
                   <TechnicalSkills activeSection={activeSection} />

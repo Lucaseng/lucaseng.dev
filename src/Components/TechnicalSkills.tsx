@@ -7,7 +7,7 @@ interface TechnicalSkillsProps {
   activeSection: number;
 }
 
-let skillArr = [
+const skillArr = [
   `mySkills.forEach((skill) => {console.log(skill)})`,
   "TypeScript (ES6+, Node.js, React)",
   "JavaScript",
@@ -39,7 +39,7 @@ function TechnicalSkills({ activeSection }: TechnicalSkillsProps) {
     if (activeSection == 2 && !hasRendered) {
       setHasRendered(true);
     }
-  }, [activeSection]);
+  }, [activeSection, hasRendered]);
 
   return (
     <Container maxWidth={"md"}>
