@@ -73,15 +73,15 @@ function Experience({ activeSection }: CareerTimelineProps) {
                 key={item.title}
                 sx={{
                   display: "grid",
-                  gridTemplateColumns: isSmallScreen ? "1fr" : "140px 1fr",
-                  gap: isSmallScreen ? 1 : 4,
+                  gridTemplateColumns: isSmallScreen ? "24px 1fr" : "140px 1fr",
+                  columnGap: isSmallScreen ? 2 : 4,
+                  rowGap: isSmallScreen ? 0.75 : 0,
                   position: "relative",
-                  pl: isSmallScreen ? 4 : 0,
                   "&::before": {
                     content: '""',
                     position: "absolute",
-                    left: isSmallScreen ? 5 : 149,
-                    top: 13,
+                    left: isSmallScreen ? 4.5 : 149,
+                    top: isSmallScreen ? 11 : 13,
                     bottom: isSmallScreen ? -53 : -69,
                     width: "1px",
                     backgroundColor: theme.palette.text.primary,
@@ -94,10 +94,28 @@ function Experience({ activeSection }: CareerTimelineProps) {
                   "&:last-of-type::before": {
                     display: "none",
                   },
+                  ...(isSmallScreen && {
+                    "&::after": {
+                      content: '""',
+                      position: "absolute",
+                      left: 0,
+                      top: 6,
+                      width: 10,
+                      height: 10,
+                      borderRadius: "50%",
+                      backgroundColor: theme.palette.text.secondary,
+                      boxShadow: "0 0 0 6px rgba(122, 229, 130, 0.12)",
+                      opacity: hasRendered ? 1 : 0,
+                      transform: hasRendered ? "scale(1)" : "scale(0.45)",
+                      transition: "opacity 450ms ease, transform 450ms ease",
+                      transitionDelay: `${index * 180 + 120}ms`,
+                    },
+                  }),
                 }}
               >
                 <Typography
                   sx={{
+                    gridColumn: isSmallScreen ? 2 : "auto",
                     color: theme.palette.text.secondary,
                     fontSize: isSmallScreen ? "0.85em" : "1em",
                     pt: 0.3,
@@ -112,11 +130,13 @@ function Experience({ activeSection }: CareerTimelineProps) {
 
                 <Box
                   sx={{
+                    gridColumn: isSmallScreen ? 2 : "auto",
                     position: "relative",
-                    "&::before": {
+                    ...(!isSmallScreen && {
+                      "&::before": {
                       content: '""',
                       position: "absolute",
-                      left: isSmallScreen ? -32 : -28,
+                      left: -28,
                       top: 8,
                       width: 10,
                       height: 10,
@@ -128,6 +148,7 @@ function Experience({ activeSection }: CareerTimelineProps) {
                       transition: "opacity 450ms ease, transform 450ms ease",
                       transitionDelay: `${index * 180 + 120}ms`,
                     },
+                    }),
                   }}
                 >
                   <Typography
